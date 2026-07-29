@@ -2,9 +2,9 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2606.28643"><img src="https://img.shields.io/badge/Paper-arXiv-56C16B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
-  <a href="https://huggingface.co/spaces/multimodal-ai-lab/VETO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-ffcc00?style=for-the-badge" alt="HF Space"></a>
-  <a href="https://huggingface.co/datasets/multimodal-ai-lab/VetoBench"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VetoBench-ffcc00?style=for-the-badge" alt="VetoBench"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-A31F34?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License"></a>
+  <a href="https://huggingface.co/spaces/multimodal-ai-lab/VETO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-B64F2C?style=for-the-badge" alt="HF Space"></a>
+  <a href="https://huggingface.co/datasets/multimodal-ai-lab/VetoBench"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VetoBench-B64F2C?style=for-the-badge" alt="VetoBench"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-5282E2?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License"></a>
 </p>
 
 <p align="center">
@@ -14,12 +14,12 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top" align="center">
+    <td width="45%" valign="top" align="center">
       <img src="assets/veto_teaser.png" alt="VETO Teaser" width="100%">
       <br>
       <strong>The two contributions:</strong> (1) A new anti-edit protection called VETO for modern reference-based image-editing models, and (2) an anti-edit benchmark VetoBench to stress-test these protections against new open-frame capabilities.
     </td>
-    <td width="50%" valign="top" align="center">
+    <td width="55%" valign="top" align="center">
       <img src="assets/veto_method.png" alt="VETO Method" width="100%">
       <br>
       <strong>Method overview:</strong> VETO's objective disrupts the attention between the reference image <em>x</em> and the canvas <em>c</em> by maximizing their entropy in early double-stream MMDiT blocks of modern image-editing models like FLUX.2.
