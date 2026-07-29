@@ -1,0 +1,41 @@
+data:
+  dataset_dir: "data/veto_dev"
+
+protection:
+  model: fibo_edit
+  surrogate_prompt: ""
+  inference_steps: 10
+  num_timesteps_per_step: 10
+  guidance_scale: 1.0
+
+  double_stream:
+    enabled: true
+    layer_indices: [0, 1, 2, 3, 4, 5, 6, 7]
+    entropy_slices:
+      - canvas_reference
+      - reference_canvas
+
+  single_stream:
+    enabled: false
+    layer_indices: []
+    entropy_slices: []
+
+perturbation:
+  epsilon: 12
+  step_size: 2
+  steps: 100
+  momentum_decay: 0.9
+  constraint:
+    type: default_epsilon
+
+run:
+  run_name_template: "veto_<model>_ds_all_cr_rc_eps=<epsilon>_steps=<steps>_<constraint_type>_<timestamp>"
+  device: cuda
+  seed: 42
+  image_size: 512
+  wandb:
+    enabled: false
+    entity: ""
+    project: veto
+    mode: online
+    log_every_n_steps: 20
