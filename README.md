@@ -1,4 +1,4 @@
-# VETO: Towards Protecting Images From Frontier AI Editing
+# 🛡️ VETO: Towards Protecting Images From Frontier AI Editing
 
 <p align="center">
   <a href="https://arxiv.org/abs/2606.28643"><img src="https://img.shields.io/badge/Paper-arXiv-56C16B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
