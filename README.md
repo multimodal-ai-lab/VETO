@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2606.28643"><img src="https://img.shields.io/badge/Paper-arXiv-56C16B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
   <a href="https://huggingface.co/spaces/multimodal-ai-lab/VETO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-B64F2C?style=for-the-badge" alt="HF Space"></a>
-  <a href="https://huggingface.co/datasets/multimodal-ai-lab/VetoBench"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VetoBench-B64F2C?style=for-the-badge" alt="VetoBench"></a>
+  <a href="https://huggingface.co/datasets/MAI-Lab/VetoBench"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VetoBench-B64F2C?style=for-the-badge" alt="VetoBench"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-5282E2?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License"></a>
 </p>
 
