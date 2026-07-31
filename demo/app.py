@@ -516,16 +516,16 @@ def build_demo():
                 <div class="header-box">
                     <h1>🛡️ VETO: Towards Protecting Images From Frontier AI Editing</h1>
                     <div class="badge-bar">
-                        <a href="#" target="_blank" class="logo-btn" title="Project Page">
+                        <a href="https://jonasgrebe.github.io/research/projects/veto/" target="_blank" class="logo-btn" title="Project Page">
                             <img src="{_logo_uri('projectpage.png')}" alt="Project Page" class="logo-img logo-img--lg">
                         </a>
                         <a href="https://github.com/multimodal-ai-lab/veto" target="_blank" class="logo-btn" title="GitHub">
                             <img src="{_logo_uri('github.png')}" alt="GitHub" class="logo-img">
                         </a>
-                        <a href="https://arxiv.org" target="_blank" class="logo-btn" title="arXiv Paper">
+                        <a href="https://arxiv.org/abs/2607.27292" target="_blank" class="logo-btn" title="arXiv Paper">
                             <img src="{_logo_uri('arxiv.png')}" alt="arXiv" class="logo-img">
                         </a>
-                        <a href="https://huggingface.co" target="_blank" class="logo-btn" title="HuggingFace">
+                        <a href="https://huggingface.co/papers/2607.27292" target="_blank" class="logo-btn" title="HuggingFace">
                             <img src="{_logo_uri('hf.png')}" alt="HuggingFace" class="logo-img">
                         </a>
                     </div>
