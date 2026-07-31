@@ -1,8 +1,8 @@
 # 🛡️ VETO: Towards Protecting Images From Frontier AI Editing
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2606.28643"><img src="https://img.shields.io/badge/Paper-arXiv-56C16B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
-  <a href="https://huggingface.co/spaces/multimodal-ai-lab/VETO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-B64F2C?style=for-the-badge" alt="HF Space"></a>
+  <a href="https://arxiv.org/abs/2607.27292"><img src="https://img.shields.io/badge/Paper-arXiv-56C16B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv"></a>
+  <a href="https://huggingface.co/spaces/Hossshakiba/VETO"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-B64F2C?style=for-the-badge" alt="HF Space"></a>
   <a href="https://huggingface.co/datasets/MAI-Lab/VetoBench"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-VetoBench-B64F2C?style=for-the-badge" alt="VetoBench"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-5282E2?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License"></a>
 </p>
@@ -39,9 +39,11 @@
   - [Run](#run)
   - [Config](#config)
   - [Entropy slices](#entropy-slices)
+- [Demo](#demo)
 - [Evaluation](#evaluation)
 - [Outputs](#outputs)
 - [Project layout](#project-layout)
+- [Citation](#citation)
 
 ---
 
@@ -56,7 +58,7 @@ uv sync
 
 ### Models
 
-Weights are downloaded from Hugging Face on first run (accept model licenses / set `HF_TOKEN` if required):
+Weights are downloaded from Hugging Face on first run (accept model licenses):
 
 | `protection.model` | Hugging Face model |
 |--------------------|--------------------|
@@ -65,7 +67,7 @@ Weights are downloaded from Hugging Face on first run (accept model licenses / s
 
 ### Dataset
 
-**[VetoBench](https://huggingface.co/datasets/multimodal-ai-lab/VetoBench)** is our anti-edit benchmark released on Hugging Face. It contains **300 images** across three categories (100 each). Every category is split evenly into **50 closed-frame** and **50 open-frame** edits:
+**[VetoBench](https://huggingface.co/datasets/MAI-Lab/VetoBench)** is our anti-edit benchmark released on Hugging Face. It contains **300 images** across three categories (100 each). Every category is split evenly into **50 closed-frame** and **50 open-frame** edits:
 
 - **Closed-frame** — modify the original scene in place.
 - **Open-frame** — extract referenced entities or traits and recontextualize them in synthesized scenes.
@@ -152,6 +154,18 @@ Slices are defined on the joint sequence `[text | canvas | reference]`:
 
 ---
 
+<h2 id="demo">🖥️ Demo</h2>
+
+Try the interactive Gradio demo on [Hugging Face Spaces](https://huggingface.co/spaces/Hossshakiba/VETO), or run it locally:
+
+```bash
+uv run python demo/app.py
+```
+
+Opens a FLUX.2 demo (default: `http://0.0.0.0:7860`) where you can protect an image, run the same edit on the unprotected and protected versions, and compare the results side by side.
+
+---
+
 <h2 id="evaluation">📊 Evaluation</h2>
 
 Pipeline: **edits → fidelity → CLIP → optional VQA**.
@@ -194,11 +208,31 @@ outputs/
 configs/protection/
   flux2.yaml              # FLUX.2 protection config
   fibo_edit.yaml          # FIBO Edit protection config
+demo/                     # Gradio demo
 run_protection.py         # protection entry point
 veto/
+  configs/                # shared project config
   protection/             # VETO objective, PGD engine, DiT wrappers, attention hooks
   evaluation/             # fidelity, CLIP, VQA
   editing/                # FLUX.2 and FIBO Edit edit backends
   data/                   # prompts.csv loader
   utils/
+```
+
+---
+
+<h2 id="citation">📚 Citation</h2>
+
+If you find this work useful, please cite:
+
+```bibtex
+@misc{grebe2026vetoprotectingimagesfrontier,
+      title={VETO: Towards Protecting Images From Frontier AI Editing}, 
+      author={Jonas Grebe and Hossein Shakibania and Tobias Braun and Marcus Rohrbach and Anna Rohrbach},
+      year={2026},
+      eprint={2607.27292},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.27292}, 
+}
 ```
